@@ -90,14 +90,22 @@ export const termes: Terme[] = [
     link: "/ressources/accord-national-centres-de-sante",
   },
   {
-    term: "Forfait structure",
-    def: "Rémunération forfaitaire versée en contrepartie d’engagements portant sur l’organisation du centre : amplitude d’ouverture, système d’information conforme, coordination interne, accueil de publics spécifiques. Elle est déclarative, ce qui la rend fragile : un indicateur non tracé pendant l’année est une recette perdue.",
+    term: "Rémunération forfaitaire spécifique",
+    def: "Rémunération versée en contrepartie d’engagements portant sur l’organisation du centre, mesurée par des indicateurs socles et optionnels déclinés selon quatre axes : accès aux soins, travail en équipe et coordination, systèmes d’information, démarche qualité. Souvent appelée à tort forfait structure, appellation issue d’autres cadres conventionnels. Elle est déclarative, ce qui la rend fragile : un indicateur non tracé pendant l’année est une recette perdue.",
     link: "/ressources/forfaits-structure-centre-de-sante",
   },
   {
     term: "ROSP (rémunération sur objectifs de santé publique)",
-    def: "Rémunération complémentaire assise sur l’atteinte d’indicateurs de santé publique et de qualité de suivi de la patientèle. Elle suppose un paramétrage correct du logiciel métier et une saisie rigoureuse tout au long de l’année.",
+    def: "Rémunération complémentaire assise sur l’atteinte d’indicateurs répartis en trois familles : suivi des pathologies chroniques, prévention et efficience. Elle a cessé de s’appliquer aux centres de santé : depuis le 1er janvier 2026, le forfait médecin traitant la remplace, ainsi que le forfait patientèle médecin traitant. L’exercice 2025 fut le dernier au titre de la ROSP.",
     link: "/ressources/rosp-centre-de-sante",
+  },
+  {
+    term: "Forfait médecin traitant",
+    def: "Dispositif institué par l’accord national des centres de santé entré en vigueur le 1er octobre 2025, applicable depuis le 1er janvier 2026. Il remplace à la fois la rémunération sur objectifs de santé publique et le forfait patientèle médecin traitant, en conservant le principe d’une rémunération assise sur le suivi d’une patientèle dans la durée plutôt que sur un volume d’actes.",
+  },
+  {
+    term: "Valorisations démographiques",
+    def: "Rémunérations liées au zonage de la commune d’implantation, instituées par l’accord national entré en vigueur le 1er octobre 2025. Elles remplacent les contrats démographiques, contrat d’aide à l’installation, contrat de stabilisation et de coordination et contrat de solidarité territoriale, auxquels les centres médicaux et polyvalents ne peuvent plus adhérer. Elles s’appliquent sans qu’un contrat soit signé.",
   },
   {
     term: "ACI (accord conventionnel interprofessionnel)",
