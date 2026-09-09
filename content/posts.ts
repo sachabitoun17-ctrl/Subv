@@ -1249,6 +1249,25 @@ export const posts: Post[] = [
 <p>La présence conjointe d’un médecin et d’un infirmier découle du salariat et de l’organisation collective. L’amplitude d’ouverture relève d’engagements que le cadre conventionnel valorise déjà. La capacité d’orientation rapide suppose une coordination interne, sujet que traite notre article sur la <a href="/ressources/coordination-centre-de-sante">fonction de coordination</a>.</p>
 <p>Autrement dit, là où une structure libérale doit se réorganiser pour satisfaire ces critères, un centre de santé doit surtout démontrer ce qu’il fait déjà. La difficulté se déplace de l’organisation vers la preuve.</p>
 
+<h2>Pour un centre de santé, l’adhésion passe par l’accord national</h2>
+<p>C’est la précision qui manque à la plupart des articles publiés sur le sujet. À côté de la labellisation conduite par les agences régionales de santé, les centres de santé disposent d’une voie propre, ouverte par l’avenant 1 à l’accord national, dont les négociations ont débuté le 26 février 2026.</p>
+<p>Un centre qui souhaite rejoindre le dispositif France Santé <strong>en fait la demande explicitement</strong>. Ce n’est donc pas une labellisation subie ni automatique. Deux conditions cumulatives sont exigées : être adhérent à l’accord national, et remplir les indicateurs socles de la rémunération forfaitaire spécifique.</p>
+<p>Cette seconde condition mérite l’attention, car elle relie le dispositif au reste du cadre conventionnel. Un centre qui néglige ses indicateurs socles se ferme l’accès au réseau sans l’avoir voulu, en plus de perdre la rémunération correspondante.</p>
+
+<h2>Les indicateurs complémentaires, organisés en briques</h2>
+<p>Au-delà du socle, l’adhésion s’apprécie sur des indicateurs complémentaires regroupés par briques. Deux d’entre elles donnent la mesure de l’exigence.</p>
+<p>La brique consacrée à l’<strong>accès aux soins</strong> attend une amplitude horaire élargie, dix heures par jour ou une ouverture le samedi matin avec un médecin généraliste, ainsi qu’une offre élargie en soins non programmés mesurée par la part de professionnels participant au service d’accès aux soins et à la permanence des soins ambulatoires.</p>
+<p>La brique consacrée à la <strong>vulnérabilité</strong> retient notamment la part de patients bénéficiaires de la complémentaire santé solidaire ou de l’aide médicale d’État dans la file active, comparée aux taux nationaux, ainsi que l’accompagnement des personnes en situation de vulnérabilité psychosociale.</p>
+<p>Là encore, un centre de santé implanté en territoire populaire se trouve souvent au-dessus des seuils sans avoir rien changé à sa pratique. Encore faut-il le mesurer et le documenter.</p>
+
+<h2>Un financement indexé sur la file active</h2>
+<p>Le mécanisme financier retenu est explicite : le montant résulte de l’addition des indicateurs socles et complémentaires, multipliée par un coefficient égal au rapport entre la file active du centre et une file active de référence nationale.</p>
+<p>La conséquence pratique est importante pour un gestionnaire. À engagements identiques, deux centres ne percevront pas la même chose : la taille de la patientèle suivie pèse directement sur le résultat. Le barème est établi par année, avec une montée en charge prévue sur plusieurs exercices.</p>
+
+<h2>La prévention, axe central du nouveau cadre</h2>
+<p>L’accord national de 2025 a créé un axe dédié à la prévention en santé, composé d’un indicateur socle commun à tous les types de centres et de deux indicateurs optionnels, portant notamment sur l’animation des missions de santé publique.</p>
+<p>Les centres franciliens sont déjà largement engagés sur ce terrain. Selon les données présentées par l’assurance maladie lors de la deuxième journée régionale des centres de santé d’Île-de-France, en juin 2026, deux cent quatre-vingt-quatorze centres y mènent des actions de prévention. Les plus répandues concernent la prévention bucco-dentaire, l’amélioration de la couverture vaccinale, les missions de relais en santé publique, le surpoids et l’obésité de l’enfant, et la souffrance psychique.</p>
+
 <h2>La position de la profession</h2>
 <p>La Fédération nationale des centres de santé et l’Union syndicale des professionnels des centres de santé ont pris position sur ce dispositif. Elles demandent un cahier des charges national exigeant, établissant un socle commun de missions tout en restant modulable selon les besoins locaux.</p>
 <p>Leur réserve principale mérite d’être connue des porteurs de projet : le réseau, écrivent-elles, <a href="https://www.fncs.org/maisons-france-sante-la-fncs-et-l-uspcs-appellent-a-construire-collectivement-le-service-public-territorial-de-sante-de-proximite" rel="noopener">ne peut se limiter à une simple labellisation des structures existantes</a> ni à la création de guichets et de plateformes d’information. Elles affirment par ailleurs que les centres de santé sont déjà en mesure de faire vivre ce réseau, de l’incarner et de le développer.</p>
