@@ -82,6 +82,9 @@ jobs:
       - name: Rythme de publication (bloquant)
         run: node scripts/check-calendrier.mjs
 
+      - name: Liens sortants (bloquant sur 404 et domaine inexistant)
+        run: node scripts/check-liens-externes.mjs
+
       - name: Relever les URL déjà en ligne
         run: |
           curl -s https://opti-cds.fr/sitemap.xml \
