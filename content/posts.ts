@@ -214,20 +214,50 @@ export const posts: Post[] = [
     date: "2026-06-07",
     readingTime: "4 min",
     category: "Conventionnement",
-    content: `<h2>Le cadre de référence des CDS</h2>
-<p>L’accord national des centres de santé est le texte qui organise les relations entre les CDS conventionnés et l’Assurance Maladie. Il fixe les rémunérations, les engagements de chaque partie et les dispositifs financiers mobilisables. Pour une direction de centre, ce n’est pas un document théorique : c’est la source d’une part importante des recettes et le référentiel auquel se rattachent la plupart des discussions avec la caisse.</p>
-<h2>Plusieurs briques de rémunération</h2>
-<p>Au-delà du paiement à l’acte, l’accord prévoit des forfaits liés à la structure, à la coordination et à la patientèle. Ces composantes évoluent au fil des avenants, ce qui rend leur suivi indispensable. Chacune obéit à sa propre logique de déclenchement, et il est fréquent qu’un centre en perçoive une sans percevoir les autres, faute d’avoir identifié qu’elles répondaient à des conditions distinctes. Le sujet des <a href="/ressources/forfaits-structure-centre-de-sante">forfaits structure en centre de santé</a> illustre bien cette mécanique par briques successives.</p>
-<h2>Ce que l’accord engage du côté du centre</h2>
-<p>Le conventionnement n’est pas seulement un droit à facturer. Il emporte des engagements de fonctionnement, en matière d’accessibilité, de pratique du tiers payant, d’organisation pluriprofessionnelle et de transmission d’informations. Ces engagements ne sont pas des formalités : ils conditionnent l’accès à plusieurs composantes de rémunération. Un centre qui néglige un volet organisationnel se prive parfois, sans le savoir, d’une ressource financière qui en dépendait directement.</p>
-<h2>Les avenants, un point de vigilance permanent</h2>
-<p>L’accord national vit par ses avenants. Un dispositif peut être créé, révisé, recentré sur d’autres critères ou remplacé. Un centre qui a paramétré son suivi une fois pour toutes se retrouve mécaniquement décalé au bout de quelques exercices. La bonne pratique consiste à confier à une personne identifiée la veille sur ces textes, puis à confronter chaque évolution à l’organisation réelle du centre plutôt qu’à en rester à une lecture juridique abstraite.</p>
-<h2>Un suivi exigeant</h2>
-<p>Beaucoup de centres ne mobilisent pas l’ensemble des dispositifs prévus, souvent par manque de temps pour suivre les évolutions réglementaires. C’est une source de financement laissée de côté. Trois symptômes reviennent souvent : aucune personne clairement responsable du sujet, une absence de rapprochement entre ce qui est attendu et ce qui est effectivement encaissé, et des données d’activité mal renseignées dans le logiciel métier, alors qu’elles servent de base à plusieurs versements.</p>
-<h2>Articuler le conventionnel et le reste du financement</h2>
-<p>Les ressources conventionnelles ne représentent qu’une partie du modèle économique. Elles se combinent avec les aides des collectivités, les crédits régionaux et les dispositifs propres aux centres de santé. Une lecture d’ensemble évite deux écueils opposés : compter sur une ressource qui ne viendra pas, ou négliger un levier disponible. C’est le sens d’une revue complète des <a href="/financements">financements d’un centre de santé</a>, menée à partir des chiffres réels de la structure et non d’un budget théorique.</p>
+    content: `
+<h2>Un accord entièrement renégocié en 2025</h2>
+<p>L’accord national des centres de santé est le texte qui organise les relations entre les centres conventionnés et l’assurance maladie. Il fixe les rémunérations, les engagements de chaque partie et les dispositifs financiers mobilisables. Pour une direction de centre, ce n’est pas un document théorique : c’est la source d’une part importante des recettes.</p>
+<p>Ce cadre a changé de fond en comble. Après la dénonciation de l’accord précédent en avril 2025, des négociations se sont tenues de mai à août 2025, organisées en quatre groupes de travail et quatre séances. Le nouvel accord national a été <strong>signé le 28 août 2025 et est entré en vigueur le 1er octobre 2025</strong>. Ses objectifs affichés sont de revaloriser les centres de santé, de simplifier le cadre et de mieux les accompagner.</p>
+<p>Un centre qui raisonne encore sur l’accord de 2015 travaille donc sur un texte abrogé. C’est la première chose à vérifier avant toute projection financière.</p>
+
+<h2>Du système de points aux montants</h2>
+<p>Le changement le plus structurant concerne le mode de calcul. L’ancien système de points cède la place à des <strong>montants fixes ou variables</strong>, déterminés selon la patientèle médecin traitant ou la file active du centre.</p>
+<p>La conséquence est directe pour un gestionnaire : à engagements identiques, deux centres ne perçoivent plus la même chose. La taille de la patientèle suivie devient un paramètre du calcul, et non plus seulement le reflet d’une activité. Cela change la manière de construire un prévisionnel, comme nous le développons dans notre article sur le <a href="/ressources/business-plan-centre-de-sante">business plan d’un centre de santé</a>.</p>
+
+<h2>Quatre axes, des indicateurs socles et optionnels</h2>
+<p>La rémunération forfaitaire spécifique est réorganisée en quatre axes, avec pour chacun des indicateurs socles et des indicateurs optionnels. Les axes portent sur l’accès aux soins, le travail en équipe et la coordination, le développement des systèmes d’information et la démarche qualité.</p>
+<p>La distinction entre socle et optionnel n’est pas cosmétique. Les indicateurs socles conditionnent l’accès à d’autres dispositifs, dont l’adhésion au réseau France Santé. Un centre qui les néglige se ferme des portes qu’il n’avait pas identifiées. Notre article sur la <a href="/ressources/forfaits-structure-centre-de-sante">rémunération forfaitaire spécifique</a> détaille cette mécanique.</p>
+
+<h2>La prévention devient un axe à part entière</h2>
+<p>Les partenaires conventionnels ont créé un axe dédié à la prévention en santé, composé d’un indicateur socle commun à tous les types de centres et de deux indicateurs optionnels, portant notamment sur l’animation des missions de santé publique et sur le rôle de relais que jouent les centres auprès de leurs patients.</p>
+<p>Ce choix n’est pas anodin pour les centres de santé, qui mènent déjà ces actions sans toujours les valoriser. Les données présentées par l’assurance maladie lors de la deuxième journée régionale des centres de santé d’Île-de-France, en juin 2026, montrent l’ampleur de l’existant : près de trois cents centres franciliens conduisent des actions de prévention, principalement en santé bucco-dentaire, en couverture vaccinale, en relais de santé publique, sur le surpoids de l’enfant et sur la souffrance psychique.</p>
+
+<h2>Deux nouveautés qui passent inaperçues</h2>
+<p>L’accord introduit des variables portant sur la <strong>santé environnementale</strong>, sujet absent des cadres conventionnels précédents. Un centre qui structure une action sur ce terrain dispose désormais d’un support de valorisation.</p>
+<p>Il renforce par ailleurs la <strong>lutte contre la fraude</strong>, avec une attention particulière portée aux logiciels, aux téléservices et à la télétransmission. Ce point mérite d’être lu comme un signal : la conformité du <a href="/ressources/systeme-information-centre-de-sante">système d’information</a> n’est plus seulement une condition de financement, elle devient un objet de contrôle.</p>
+
+<h2>La fin des contrats démographiques</h2>
+<p>L’accord met fin à la possibilité d’adhérer aux contrats démographiques pour les centres médicaux et polyvalents, contrat d’aide à l’installation, contrat de stabilisation et de coordination et contrat de solidarité territoriale compris. Ces dispositifs sont remplacés par des valorisations assises sur le zonage, qui s’appliquent sans signature. Les contrats conclus avant l’entrée en vigueur se poursuivent jusqu’à leur terme, et les contrats propres à l’activité dentaire sont maintenus.</p>
+<p>Un porteur de projet qui construit son plan de financement sur ces contrats travaille donc sur des dispositifs fermés. Les <a href="/financements/ile-de-france">pages territoriales</a> de ce site précisent ce que cela change région par région.</p>
+
+<h2>L’avenant 1 du 5 juin 2026</h2>
+<p>Le cadre a déjà évolué depuis. Les négociations d’un premier avenant ont débuté le 26 février 2026, et cet avenant a été <strong>signé le 5 juin 2026</strong>. Il porte quatre sujets principaux.</p>
+<ul>
+  <li>La création du <strong>réseau France Santé</strong>, destiné à améliorer la lisibilité et l’accès aux soins de proximité, que nous détaillons dans notre article sur le <a href="/ressources/label-maison-france-sante-centre-de-sante">label Maison France Santé</a>.</li>
+  <li>Un <strong>forfait de santé publique</strong>, qui valorise les centres atteignant des objectifs sur des enjeux de santé publique majeurs, calculé sur la patientèle médecin traitant du centre.</li>
+  <li>Une révision du <strong>calcul de la précarité</strong>, déterminante pour les centres implantés en territoire populaire.</li>
+  <li>Un traitement spécifique des <strong>centres atypiques</strong>, ainsi que de nouvelles mesures contre la fraude.</li>
+</ul>
+<p>L’adhésion au réseau France Santé suppose d’être adhérent à l’accord national, de remplir les indicateurs socles de la rémunération forfaitaire spécifique, et d’être désigné comme centre de santé polyvalent ou médical. Elle se demande explicitement, dans le cadre d’appels à candidatures dont les échéances sont fixées par voie réglementaire.</p>
+
+<h2>Ce qu’un gestionnaire doit faire maintenant</h2>
+<p>Trois vérifications s’imposent. D’abord, s’assurer que les projections financières du centre reposent sur l’accord de 2025 et non sur le précédent, ce qui suppose de revoir les hypothèses de recettes forfaitaires.</p>
+<p>Ensuite, faire le point sur les indicateurs socles : ils commandent désormais l’accès à d’autres dispositifs, et ils se déclarent sur des éléments qu’il faut avoir tracés pendant l’année. C’est le rôle des <a href="/ressources/indicateurs-pilotage-centre-de-sante">indicateurs de pilotage</a> du centre.</p>
+<p>Enfin, examiner les actions de prévention déjà menées. Beaucoup de centres en conduisent sans les rattacher à un support de valorisation, et le nouvel axe dédié rend cet oubli plus coûteux qu’avant.</p>
+
 <h2>Contactez-nous</h2>
-<p>Un check-up gratuit permet de regarder quels dispositifs conventionnels votre centre mobilise déjà, et ceux qui restent à activer. Contactez-nous pour un check-up.</p>`,
+<p>Un check-up gratuit permet de confronter vos recettes conventionnelles au cadre issu de l’accord de 2025 et de son premier avenant, et d’identifier ce que votre centre ne déclare pas encore. Contactez-nous pour un check-up.</p>
+`,
   },
   {
     slug: "conventionnement-centre-de-sante",
