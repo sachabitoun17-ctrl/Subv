@@ -37,6 +37,18 @@ const UA = "Mozilla/5.0 (compatible; opti-cds-linkcheck/1.0; +https://opti-cds.f
 // Seuls ces codes prouvent que la cible n'existe pas.
 const CODES_MORTS = new Set([404, 410]);
 
+// Domaines tolérés le temps de leur mise en ligne.
+//
+// Un lien vers un domaine pas encore publié reste un lien mort, et le contrôle
+// continue de le signaler bruyamment. Il ne bloque simplement pas le
+// déploiement, parce que retenir tout le reste du site pour un lien sur trois
+// pages coûte plus cher que le lien lui-même sur un site à faible trafic.
+//
+// CETTE LISTE DOIT SE VIDER. Chaque entrée est une dette assumée, pas une
+// exception permanente : retirer le domaine dès qu'il résout, ce que le
+// contrôle confirmera en le laissant passer en vert.
+const EN_ATTENTE = new Set(["talentcaresante.fr", "www.talentcaresante.fr"]);
+
 if (!existsSync(OUT_DIR)) {
   console.error(`check-liens-externes: dossier "${OUT_DIR}" introuvable.`);
   process.exit(1);
@@ -100,6 +112,7 @@ async function interroger(url) {
 
 const bloquants = [];
 const incertains = [];
+const tolerees = [];
 
 for (const [url, pages] of sources) {
   let r = await interroger(url);
@@ -123,12 +136,25 @@ for (const [url, pages] of sources) {
       console.log(`  ✓ ${r.statut}  ${url}`);
     }
   } else if (r.erreur === "ENOTFOUND") {
-    bloquants.push({ url, motif: "domaine introuvable", pages: liste, total: pages.size });
-    console.log(`  ✗ DNS  ${url}  (domaine introuvable)`);
+    let hote = "";
+    try { hote = new URL(url).hostname; } catch {}
+    if (EN_ATTENTE.has(hote)) {
+      tolerees.push({ url, total: pages.size });
+      console.log(`  !  DNS  ${url}  (domaine attendu, toléré)`);
+    } else {
+      bloquants.push({ url, motif: "domaine introuvable", pages: liste, total: pages.size });
+      console.log(`  ✗ DNS  ${url}  (domaine introuvable)`);
+    }
   } else {
     incertains.push({ url, motif: r.erreur });
     console.log(`  ?      ${url}  (${r.erreur})`);
   }
+}
+
+if (tolerees.length) {
+  console.log(`\n${tolerees.length} lien(s) vers un domaine attendu, tolérés le temps de la mise en ligne :`);
+  for (const t of tolerees) console.log(`  ! ${t.url}  (${t.total} page(s))`);
+  console.log("  Retirer ces domaines de EN_ATTENTE une fois publiés.");
 }
 
 if (incertains.length) {
