@@ -31,6 +31,26 @@ export default function Page() {
         <p>Cloudflare Pages, Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA.</p>
         <h2>Propriété intellectuelle</h2>
         <p>L’ensemble des contenus présents sur ce site est protégé par le droit d’auteur.</p>
+        <h2>Portée des informations publiées</h2>
+        <p>
+          Les contenus de ce site décrivent des dispositifs de financement et un cadre
+          réglementaire qui évoluent. Ils sont publiés à titre indicatif, à des fins
+          d’information générale, et ne constituent ni un conseil juridique, ni un
+          conseil fiscal, ni une garantie d’éligibilité.
+        </p>
+        <p>
+          Aucune information figurant sur ce site ne saurait se substituer à l’examen
+          de votre situation particulière, ni aux textes en vigueur et aux positions des
+          organismes compétents, notamment les agences régionales de santé et
+          l’Assurance Maladie. Les montants, plafonds et conditions d’accès mentionnés
+          par ces organismes font foi.
+        </p>
+        <p>
+          Nous nous efforçons de maintenir ces contenus à jour, sans pouvoir garantir
+          qu’ils reflètent à tout moment l’état du droit applicable. Toute décision prise
+          sur la seule base de ces pages relève de la responsabilité de son auteur.
+          Contactez-nous pour un examen de votre situation.
+        </p>
         <h2>Données personnelles</h2>
         <p>
           Les données collectées via le formulaire de contact sont utilisées

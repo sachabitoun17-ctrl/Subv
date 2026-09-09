@@ -58,8 +58,21 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-xs text-white/45">
-          © {year} Opti-CDS
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-xs text-white/45 flex flex-col gap-2">
+          {/* Avertissement place ici, et nulle part ailleurs. Le repeter sur
+              chaque page affaiblirait des contenus dont la valeur commerciale
+              tient justement a leur caractere affirmatif. Une mention unique en
+              pied de page couvre l'ensemble du site sans diluer aucune page. */}
+          <p className="max-w-3xl leading-relaxed">
+            Les informations publiées sur ce site sont fournies à titre indicatif et ne
+            constituent ni un conseil juridique, ni un engagement sur l’éligibilité d’une
+            structure à un dispositif. La réglementation et les montants évoluent, et chaque
+            situation s’apprécie au cas par cas. Voir les{" "}
+            <Link href="/mentions-legales" className="underline underline-offset-2 hover:text-white/70">
+              mentions légales
+            </Link>.
+          </p>
+          <p>© {year} Opti-CDS</p>
         </div>
       </div>
     </footer>
