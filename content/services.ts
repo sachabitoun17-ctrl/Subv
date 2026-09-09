@@ -313,6 +313,9 @@ export const services: Service[] = [
 <h2>Articulation avec nos autres missions</h2>
 <p>Un recrutement ne se traite jamais isolement. Un poste medical supplementaire modifie l'equilibre economique, les plannings et la capacite d'accueil. Nous verifions donc en parallele que le modele tient, ce qui rejoint nos travaux de <a href="/services/optimisation-de-l-activite">pilotage de l'activite</a>. Lorsque le recrutement s'inscrit dans une croissance plus large, ouverture d'antenne ou nouvelle specialite, il releve de la mission <a href="/services/developpement">developpement</a>. Et quand le financement du poste depend de dispositifs conventionnels ou de subventions, notamment la subvention Teulade prevue a l'article L162-32, nous integrons cette dimension a l'analyse plutot que de la decouvrir apres la signature.</p>
 
+<h2>Qui realise le sourcing</h2>
+<p>La recherche des praticiens elle-meme est conduite avec <a href="https://talentcaresante.fr" rel="noopener">TalentCare Sante</a>, notre partenaire dedie au recrutement medical. Nous restons votre interlocuteur sur le cadrage du besoin, la construction du poste et tout ce qui touche au fonctionnement du centre de sante.</p>
+
 <h2>Contactez-nous</h2>
 <p>Si vous cherchez un ou plusieurs medecins et que la demarche s'enlise, un regard exterieur permet d'identifier ce qui bloque avant d'engager du temps et du budget dans une campagne qui ne donnera rien. Contactez-nous pour un check-up.</p>`,
   },

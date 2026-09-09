@@ -89,6 +89,7 @@ export const territoires: Territoire[] = [
 
 <h2>Comment nous intervenons</h2>
 <p>Nous vérifions d’abord le zonage réel de votre implantation, puis nous établissons la liste des dispositifs auxquels votre centre peut prétendre compte tenu de sa typologie, de son statut gestionnaire et de son stade d’avancement. Nous construisons ensuite la séquence de dépôt, puis nous prenons en charge l’instruction des dossiers jusqu’à leur terme. Cette démarche s’inscrit dans nos missions de <a href="/services/subventions-et-financements">financement et subventions</a> et, pour les projets en création, d’appui au <a href="/services/dossier-ars">dossier ARS</a>.</p>
+<p>Le détail de ces dispositifs est publié par le <a href="https://www.iledefrance.paps.sante.fr/laccompagnement-financier-des-centres-de-sante" rel="noopener">portail d’accompagnement des professionnels de santé d’Île-de-France</a>, qui fait autorité sur leur périmètre.</p>
 <p>Les montants et les plafonds évoluent d’un exercice à l’autre et dépendent du zonage comme de la nature du projet. Nous ne les publions pas ici, parce qu’un chiffre périmé induit en erreur : ils s’apprécient au cas par cas, sur pièces.</p>
 
 <h2>Contactez-nous</h2>

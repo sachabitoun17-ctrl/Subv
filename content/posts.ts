@@ -761,6 +761,8 @@ export const posts: Post[] = [
 <p>Migrer coûte du temps, de la formation, et de la qualité de données pendant plusieurs semaines. La décision se justifie quand l’outil bloque réellement la facturation ou le pilotage, pas par simple lassitude des équipes. Avant d’en changer, il est utile d’inventorier les fonctions déjà disponibles et non exploitées, et de rapprocher cette analyse du <a href="/services/conseil-en-organisation">fonctionnement quotidien du centre</a>. Beaucoup de migrations reproduisent les mêmes défauts dans un nouvel environnement.</p>
 <h2>Un choix à ne pas négliger</h2>
 <p>Le choix et le paramétrage de l’outil méritent du soin. Un système mal exploité fait perdre du temps et de l’argent, et fragilise la capacité du centre à justifier son activité auprès des financeurs.</p>
+<h2>Où se renseigner</h2>
+<p>Les référentiels d’interopérabilité et de sécurité applicables aux logiciels de santé sont publiés par l’Agence du numérique en santé, dont le <a href="https://esante.gouv.fr/" rel="noopener">portail esante.gouv.fr</a> fait référence. Vérifier la conformité de votre éditeur avant de vous engager évite de découvrir une incompatibilité au moment de déclarer un financement qui en dépend.</p>
 <h2>Contactez-nous</h2>
 <p>Un check-up gratuit permet d’examiner l’usage réel que vous faites de votre système et les recettes qu’il laisse échapper. Contactez-nous pour un check-up.</p>`,
   },
@@ -905,6 +907,8 @@ export const posts: Post[] = [
 </ul>
 <h2>Outiller plutôt que surcharger</h2>
 <p>Beaucoup de centres réagissent à la surcharge en élargissant encore la fiche de poste. C’est généralement contre-productif. La réponse tient plutôt à trois choses : un système d’information correctement paramétré, des procédures écrites pour les tâches récurrentes, et un appui extérieur sur les sujets techniques qui ne justifient pas une compétence interne permanente. Sur les questions de financement en particulier, un <a href="/accompagnement">accompagnement spécialisé</a> décharge le gestionnaire de la veille réglementaire sans lui retirer le pilotage.</p>
+<h2>Se rapprocher de la profession</h2>
+<p>Les gestionnaires de centres de santé disposent d’une représentation nationale. La <a href="https://www.fncs.org/" rel="noopener">Fédération nationale des centres de santé</a> publie des repères sectoriels et constitue un point d’entrée utile pour un porteur de projet qui cherche à confronter son montage à des pratiques établies.</p>
 <h2>Contactez-nous</h2>
 <p>Un check-up gratuit permet de situer la charge réelle du poste et les leviers de financement laissés de côté. Contactez-nous pour un check-up.</p>`,
   },
@@ -1167,7 +1171,7 @@ export const posts: Post[] = [
 <p>Un départ se prépare longtemps avant d'être annoncé. Les signes précèdent : baisse de participation aux réunions d'équipe, demandes répétées d'aménagement d'horaires, désengagement des projets transversaux, questions inhabituelles sur les modalités de rupture, ou refus systématique de prendre de nouveaux patients. Aucun de ces signaux ne vaut preuve isolément, mais leur accumulation chez un même praticien justifie un entretien avant que la décision ne soit prise. Une fois le courrier envoyé, la marge de manoeuvre est presque toujours nulle.</p>
 
 <h2>Fidélisation et équilibre économique</h2>
-<p>Retenir un praticien protège directement le modèle du centre. La patientèle reste attachée à la structure, les indicateurs de suivi conservent leur continuité, et les <a href="/financements">financements mobilisables par le centre</a> qui reposent sur l'activité et sur la qualité du suivi ne subissent pas de rupture. Un turnover élevé dégrade ces recettes bien au-delà du coût visible du remplacement. C'est un des points que nous examinons systématiquement dans nos missions de <a href="/recrutement-medecins">recrutement de médecins</a>, aux côtés de nos partenaires recruteurs : recruter sans traiter la rétention revient à remplir un réservoir percé.</p>
+<p>Retenir un praticien protège directement le modèle du centre. La patientèle reste attachée à la structure, les indicateurs de suivi conservent leur continuité, et les <a href="/financements">financements mobilisables par le centre</a> qui reposent sur l'activité et sur la qualité du suivi ne subissent pas de rupture. Un turnover élevé dégrade ces recettes bien au-delà du coût visible du remplacement. C'est un des points que nous examinons systématiquement dans nos missions de <a href="/recrutement-medecins">recrutement de médecins</a>, aux côtés de <a href="https://talentcaresante.fr" rel="noopener">TalentCare Santé</a>, notre partenaire recrutement : recruter sans traiter la rétention revient à remplir un réservoir percé.</p>
 
 <h2>Contactez-nous</h2>
 <p>Un check-up gratuit permet d'objectiver votre turnover, d'identifier les conditions d'exercice qui font partir vos praticiens et de hiérarchiser les leviers accessibles à court terme. Contactez-nous pour un check-up.</p>
