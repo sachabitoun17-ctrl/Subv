@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTA";
-import { publishedPosts, getPost } from "@/content/posts";
+import { publishedPosts, getPost, CTA_MARQUEUR } from "@/content/posts";
+import { CTAEncart } from "@/components/CTAEncart";
 import { SITE_NAME, SITE_URL, OG_IMAGE, makePageMeta } from "@/lib/seo";
 
 type Params = { slug: string };
@@ -28,6 +29,12 @@ export default function Page({ params }: { params: Params }) {
   const post = getPost(params.slug);
   if (!post) notFound();
   const related = publishedPosts().filter((p) => p.slug !== post.slug).slice(0, 3);
+
+  // Découpe du corps sur le marqueur. Absent, tout le texte passe avant
+  // l'encart : l'article reste intégralement affiché quoi qu'il arrive.
+  const coupure = post.content.indexOf(CTA_MARQUEUR);
+  const avantCta = coupure < 0 ? post.content : post.content.slice(0, coupure);
+  const apresCta = coupure < 0 ? "" : post.content.slice(coupure + CTA_MARQUEUR.length);
 
   // Schema.org Article complet : image, dateModified, publisher.logo,
   // mainEntityOfPage typé. Sans ces champs, le Google Rich Results Test
@@ -73,7 +80,20 @@ export default function Page({ params }: { params: Params }) {
       </section>
 
       <article className="bg-white border-b border-line">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14 prose-content" dangerouslySetInnerHTML={{ __html: post.content }} />
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <div className="prose-content" dangerouslySetInnerHTML={{ __html: avantCta }} />
+          {post.cta ? (
+            <CTAEncart
+              question={post.cta.question}
+              reponse={post.cta.reponse}
+              label={post.cta.label}
+              mention={post.cta.mention}
+            />
+          ) : null}
+          {apresCta ? (
+            <div className="prose-content" dangerouslySetInnerHTML={{ __html: apresCta }} />
+          ) : null}
+        </div>
       </article>
 
       <section className="bg-soft border-b border-line">

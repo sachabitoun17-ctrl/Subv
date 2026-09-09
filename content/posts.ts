@@ -6,7 +6,30 @@ export type Post = {
   readingTime: string;
   category: string;
   content: string;
+  /**
+   * Encart d'appel à l'action inséré dans le corps de l'article, à l'endroit
+   * du marqueur <!--cta--> plutôt qu'en pied de page.
+   *
+   * Le pied de page n'est lu que par ceux qui sont allés au bout. Or les
+   * requêtes qui amènent du monde sur les pages Teulade sont des requêtes de
+   * gens qui cherchent quoi faire ("formulaire", "c'est quoi", "qui y a
+   * droit") : ils décrochent au moment précis où le texte répond à leur
+   * question, souvent bien avant la fin. L'encart doit donc se placer là, et
+   * la question qu'il pose doit être celle qu'ils viennent de se poser.
+   *
+   * Sans marqueur dans le corps, l'encart est ajouté à la fin : un article
+   * mal balisé perd le bon placement, jamais l'appel à l'action.
+   */
+  cta?: {
+    question: string;
+    reponse: string;
+    label?: string;
+    mention?: string;
+  };
 };
+
+/** Marqueur d'insertion de l'encart dans le corps HTML d'un article. */
+export const CTA_MARQUEUR = "<!--cta-->";
 
 export const posts: Post[] = [
   {
@@ -17,6 +40,12 @@ export const posts: Post[] = [
     date: "2026-05-12",
     readingTime: "4 min",
     category: "Subventions",
+    cta: {
+      question: "Votre centre est-il concerné, oui ou non ?",
+      reponse:
+        "C’est la seule question qui compte, et elle se tranche sur pièces, pas en lisant un article. Nous regardons votre situation réelle et nous vous répondons clairement, y compris quand la réponse est non.",
+      label: "Faire vérifier mon centre",
+    },
     content: `<h2>Qu’est-ce que la subvention Teulade ?</h2>
 <p>La subvention dite Teulade est un dispositif spécifique aux centres de santé conventionnés, prévu par le code de la sécurité sociale à l’article L162-32. Elle s’inscrit dans l’ensemble des financements publics et conventionnels mobilisables par un CDS. Elle ne se substitue ni aux rémunérations conventionnelles issues de l’accord national, ni aux aides des collectivités, ni aux crédits régionaux. Elle relève d’une logique propre.</p>
 <h2>Pour quels centres ?</h2>
@@ -25,6 +54,7 @@ export const posts: Post[] = [
 <p>La plupart des directions connaissent bien leurs recettes d’activité et leurs forfaits, parce que ces flux reviennent à échéance régulière. La Teulade appartient à une autre catégorie, moins visible et moins routinière, ce qui explique son absence fréquente des budgets prévisionnels. Elle mérite pourtant d’être examinée au même titre que les autres briques du <a href="/ressources/financement-centre-de-sante">financement d’un centre de santé</a>, dès la construction du modèle économique et pas uniquement lorsque la trésorerie se tend.</p>
 <h2>Pourquoi tant de centres passent à côté</h2>
 <p>Une part significative des centres de santé ne perçoit pas la totalité des subventions auxquelles ils ont droit, par complexité des démarches ou manque de ressources internes. Les causes se ressemblent d’un centre à l’autre. La direction est absorbée par l’exploitation quotidienne. Le sujet est réputé technique, donc reporté d’un exercice sur l’autre. Enfin, personne ne dispose d’une vision consolidée de ce que le centre perçoit déjà et de ce qu’il ne perçoit pas. Ce phénomène dépasse d’ailleurs le seul cas de la Teulade, comme l’illustre le sujet des <a href="/ressources/subventions-sous-mobilisees-centre-de-sante">subventions sous-mobilisées en centre de santé</a>.</p>
+<!--cta-->
 <h2>Les erreurs d’appréciation les plus fréquentes</h2>
 <p>Trois réflexes coûtent cher. Le premier consiste à conclure trop vite à une absence d’éligibilité, sur la foi d’une information partielle ou d’un précédent mal compris dans un autre centre. Le deuxième consiste à traiter le sujet comme une formalité administrative isolée, alors qu’il engage la présentation de l’activité et la cohérence des documents de la structure. Le troisième consiste à raisonner dispositif par dispositif, sans articuler ce levier avec ceux qui sont déjà mobilisés, au risque d’incohérences entre les éléments transmis aux différents interlocuteurs.</p>
 <h2>Pourquoi un accompagnement spécialisé</h2>
@@ -1323,6 +1353,12 @@ export const posts: Post[] = [
     date: "2026-09-09",
     readingTime: "3 min",
     category: "Repères",
+    cta: {
+      question: "Vous avez trouvé le texte. Reste à savoir ce qu’il donne chez vous.",
+      reponse:
+        "Le code de la sécurité sociale dit ce à quoi un centre peut prétendre, pas ce que le vôtre peut obtenir. Cela dépend de votre situation d’emploi réelle, et cela s’établit sur pièces. Nous faisons ce travail pour vous, du contrôle jusqu’au versement.",
+      label: "Savoir ce que cela donne chez moi",
+    },
     content: `
 <h2>Un nom d’usage, un article de code</h2>
 <p>Les gestionnaires de centres parlent couramment de loi Teulade ou de subvention Teulade. L’expression est un nom d’usage : le dispositif est codifié à l’<strong>article L162-32 du code de la sécurité sociale</strong>, et c’est ce texte qui fait foi.</p>
@@ -1331,7 +1367,7 @@ export const posts: Post[] = [
 <h2>Pourquoi ce dispositif a été créé</h2>
 <p>C’est le point le plus intéressant, et le moins connu. La subvention existe depuis 1993, et elle répond à un problème d’équité entre deux modes d’exercice.</p>
 <p>Lorsqu’un professionnel de santé exerce en libéral, l’assurance maladie prend en charge une partie de ses cotisations sociales. Ce mécanisme n’a pas d’équivalent naturel pour un professionnel salarié : le centre de santé qui l’emploie supporte les charges liées à cet emploi, sans la contrepartie dont bénéficie l’exercice libéral.</p>
-<p>Le dispositif corrige ce déséquilibre. Les caisses primaires versent aux centres de santé une subvention correspondant à une part des cotisations dues au titre de l’emploi des praticiens et des auxiliaires médicaux. Sa logique n’est donc pas celle d’une aide de projet ni d’une faveur : c’est un rétablissement de parité entre le salariat et l’exercice libéral.</p>
+<p>Le dispositif corrige ce déséquilibre en attachant au centre de santé une contrepartie liée à l’emploi salarié de ses praticiens et de ses auxiliaires médicaux. Sa logique n’est donc pas celle d’une aide de projet ni d’une faveur : c’est un rétablissement de parité entre le salariat et l’exercice libéral. C’est aussi ce qui explique qu’elle ne se demande pas comme une subvention ordinaire, et que sa portée réelle se mesure centre par centre.</p>
 
 <h2>Ce que cela implique sur le fond</h2>
 <p>Trois conséquences découlent de cette origine, et elles éclairent le comportement du dispositif.</p>
@@ -1339,6 +1375,7 @@ export const posts: Post[] = [
 <p>Ensuite, elle est <strong>durable par construction</strong>. Une aide de projet s’éteint avec le projet ; une compensation attachée à l’emploi de praticiens salariés perdure tant que cet emploi perdure.</p>
 <p>Enfin, elle relève d’un régime distinct des aides des agences régionales de santé, des subventions de collectivités et des rémunérations forfaitaires du cadre conventionnel. Le panorama d’ensemble figure sur notre page <a href="/financements">financements</a>, et notre article sur l’<a href="/ressources/accord-national-centres-de-sante">accord national des centres de santé</a> traite du volet conventionnel.</p>
 
+<!--cta-->
 <h2>Pourquoi tant de centres n’en bénéficient pas</h2>
 <p>Un dispositif rattaché à un statut ne se rappelle à personne. Il n’y a ni appel à projets, ni campagne, ni chargé de mission qui propose un dossier. Le centre doit y aller de lui-même, et rien dans son quotidien ne le lui rappelle.</p>
 <p>S’y ajoute une difficulté de vocabulaire. Le dispositif circule sous un nom qui ne figure dans aucun texte, ce qui complique la recherche d’information pour qui ne connaît pas le numéro d’article. C’est un cas particulier du phénomène plus général que décrit notre article sur les <a href="/ressources/subventions-sous-mobilisees-centre-de-sante">subventions sous-mobilisées</a>.</p>
@@ -1360,15 +1397,22 @@ export const posts: Post[] = [
     date: "2026-09-12",
     readingTime: "3 min",
     category: "Financement",
+    cta: {
+      question: "Combien votre centre laisse-t-il passer chaque année ?",
+      reponse:
+        "Cela se chiffre à partir de votre masse salariale réelle, pas à partir d’une moyenne. Nous faisons le calcul sur vos pièces et vous donnons le montant, avant que vous n’engagiez quoi que ce soit.",
+      label: "Faire chiffrer mon centre",
+      mention: "Échange gratuit, sans engagement. Vous repartez avec le chiffre.",
+    },
     content: `
 <h2>Le poste qui commande tout le reste</h2>
 <p>Dans un centre de santé, les charges de personnel constituent le poste dominant, et elles sont largement fixes. Les salaires courent que le planning soit rempli ou non, que la patientèle soit montée en charge ou pas encore. C’est cette rigidité qui rend le modèle du centre plus exposé que celui d’un cabinet libéral.</p>
-<p>Toute recette qui vient alléger ce poste agit donc à un endroit différent des autres. Une aide à l’investissement finance des murs, un forfait récompense une organisation. Une compensation assise sur les charges d’emploi touche au cœur de l’équation.</p>
+<p>Toute recette qui vient alléger ce poste agit donc à un endroit différent des autres. Une aide à l’investissement finance des murs, un forfait récompense une organisation. Une recette qui vient alléger ce poste-là touche au cœur de l’équation.</p>
 
 <h2>Une recette qui n’engendre pas de charge nouvelle</h2>
 <p>C’est la distinction la plus utile à comprendre pour un gestionnaire, et elle est rarement formulée.</p>
 <p>La plupart des financements accessibles à un centre financent une action : une étude, un équipement, un temps de coordination, une démarche de prévention. Chacun apporte une recette, mais chacun suppose aussi d’engager quelque chose. Le solde net est toujours inférieur au montant affiché.</p>
-<p>Une compensation rattachée à l’emploi de praticiens salariés ne fonctionne pas ainsi. Elle porte sur une charge que le centre supporte déjà, qu’il perçoive la subvention ou non. Ce qu’elle apporte s’ajoute donc au résultat sans contrepartie de dépense, ce qui en fait une recette d’une nature particulière dans le compte d’exploitation.</p>
+<p>La subvention Teulade ne fonctionne pas ainsi. Elle vient en face d’une charge que le centre supporte déjà, qu’il la perçoive ou non. Ce qu’elle apporte s’ajoute donc au résultat sans contrepartie de dépense, ce qui en fait une recette d’une nature particulière dans le compte d’exploitation.</p>
 
 <h2>Ce que cela change dans les arbitrages</h2>
 <p>Un centre dont la masse salariale est allégée n’a pas seulement un meilleur résultat comptable. Il retrouve des marges de manœuvre sur des décisions qu’il repoussait :</p>
@@ -1380,6 +1424,7 @@ export const posts: Post[] = [
 </ul>
 <p>Ce dernier point mérite d’être souligné. Un poste médical vacant ne coûte pas qu’un salaire non versé : il annule l’activité correspondante et fragilise les indicateurs dont dépendent d’autres recettes. Le lien entre financement et <a href="/recrutement-medecins">recrutement médical</a> n’est pas théorique.</p>
 
+<!--cta-->
 <h2>L’effet sur la trésorerie</h2>
 <p>Un centre de santé vit avec un décalage permanent entre les soins réalisés et leur encaissement, décalage que le tiers payant accentue mécaniquement. Une recette régulière, non conditionnée à une action ponctuelle, joue donc autant sur la <a href="/ressources/tresorerie-centre-de-sante">trésorerie</a> que sur le résultat de l’exercice.</p>
 <p>C’est un point que les prévisionnels sous-estiment souvent, comme le développe notre article sur le <a href="/ressources/business-plan-centre-de-sante">business plan d’un centre de santé</a> : un modèle peut être équilibré sur l’année et tendu tous les mois.</p>

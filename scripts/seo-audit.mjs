@@ -153,12 +153,18 @@ for (const file of files) {
   const isArticle = /^\/ressources\/[^/]+\/?$/.test(route) && route !== "/ressources/";
   if (!isArticle) continue;
 
-  const pIdx = html.indexOf("prose-content");
+  // Le corps d'un article peut être servi en plusieurs blocs `prose-content`,
+  // depuis qu'un encart d'appel à l'action s'intercale en plein texte. Ne lire
+  // que le premier revenait à ne compter que la moitié de l'article : le
+  // décompte de mots et la recherche de liens internes portaient sur un texte
+  // tronqué, et un article réellement trop court pouvait passer inaperçu à
+  // l'inverse. On les concatène tous.
   let body = "";
-  if (pIdx !== -1) {
+  for (let pIdx = html.indexOf("prose-content"); pIdx !== -1; pIdx = html.indexOf("prose-content", pIdx + 1)) {
     const openEnd = html.indexOf(">", pIdx);
     const closeIdx = html.indexOf("</div>", openEnd);
-    body = openEnd !== -1 && closeIdx !== -1 ? html.slice(openEnd + 1, closeIdx) : "";
+    if (openEnd === -1 || closeIdx === -1) continue;
+    body += (body ? " " : "") + html.slice(openEnd + 1, closeIdx);
   }
   if (!body) {
     block(route, "corps-introuvable", "corps d'article (prose-content) introuvable");

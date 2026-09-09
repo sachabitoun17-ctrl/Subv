@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTA";
 import { Faq } from "@/components/Faq";
 import { teuladeBody, teuladeFaq } from "@/content/subvention-teulade";
+import { CTAEncart } from "@/components/CTAEncart";
 import { makePageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -18,8 +19,11 @@ export const metadata: Metadata = {
     // transmission à la CPAM, ce qui livrait en clair la méthode que le corps
     // de la page refuse volontairement de détailler.
     title: "Subvention Teulade : qui peut en bénéficier",
+    // « formulaire subvention teulade » ressort en position 5 sans un seul
+    // clic : le snippet ne disait rien du formulaire, donc rien qui ressemble
+    // à la réponse cherchée. Il le dit maintenant, sans livrer la procédure.
     description:
-      "Dispositif réservé aux centres de santé conventionnés, prévu par l’article L162-32. Qui est concerné, et pourquoi tant de centres passent à côté.",
+      "Qui peut en bénéficier, pourquoi il n’existe aucun formulaire à télécharger, et comment savoir si votre centre de santé est concerné.",
     path: "/subvention-teulade",
   }),
   keywords: [
@@ -40,16 +44,36 @@ export const metadata: Metadata = {
 };
 
 
+// Ces étapes disent ce que le centre a à faire et ce que nous portons à sa
+// place. Elles ne nommaient ni l'organisme destinataire ni l'ordre des
+// démarches jusqu'ici par oubli : la description de la page avait déjà été
+// corrigée pour la même raison, le corps ne l'avait pas été. Un lecteur ne
+// doit pas pouvoir reconstituer le circuit en lisant la page.
 const steps = [
   { n: "01", t: "Vérification de l’éligibilité", d: "Premier échange pour valider que votre centre peut prétendre au dispositif." },
   { n: "02", t: "Récupération des pièces", d: "Nous collectons auprès de vos équipes ou prestataires les documents nécessaires au dossier." },
-  { n: "03", t: "Constitution du dossier", d: "Calculs, formulaires, justificatifs : nous assemblons un dossier conforme et complet." },
-  { n: "04", t: "Transmission à la CPAM", d: "Nous adressons le dossier à la caisse compétente et suivons sa réception." },
-  { n: "05", t: "Échanges et validation", d: "Nous répondons aux demandes de la CPAM et défendons le dossier jusqu’à acceptation." },
+  { n: "03", t: "Constitution du dossier", d: "Nous assemblons un dossier complet et défendable à partir de votre situation réelle." },
+  { n: "04", t: "Dépôt et instruction", d: "Nous engageons la démarche et en assurons le suivi, sans mobiliser vos équipes." },
+  { n: "05", t: "Échanges et validation", d: "Nous répondons aux demandes qui nous sont adressées et défendons le dossier jusqu’à acceptation." },
   { n: "06", t: "Suivi jusqu’au versement", d: "Nous restons sur le dossier jusqu’à la réception effective des fonds par votre centre." },
 ];
 
+// Découpe le corps en trois blocs, aux titres de section indiqués. Si un titre
+// disparaît du contenu, la partie correspondante reste vide plutôt que de
+// casser la page, et le texte reste intégralement affiché.
+function decouper(html: string) {
+  const m1 = html.indexOf("<h2>Pourquoi tant de centres");
+  const m2 = html.indexOf("<h2>Ce que ce financement change");
+  if (m1 < 0 || m2 < 0 || m2 < m1) return { avant: html, milieu: "", apres: "" };
+  return {
+    avant: html.slice(0, m1),
+    milieu: html.slice(m1, m2),
+    apres: html.slice(m2),
+  };
+}
+
 export default function Page() {
+  const corps = decouper(teuladeBody);
   return (
     <>
       <section className="relative bg-gradient-to-b from-soft to-white overflow-hidden border-b border-line">
@@ -122,11 +146,34 @@ export default function Page() {
         </div>
       </section>
 
+      {/* Le corps est coupé en trois pour intercaler deux appels à l'action au
+          moment où la question se pose dans la lecture, plutôt qu'une seule
+          fois en pied de page. Les deux encarts répondent aux intentions de
+          recherche réellement observées en Search Console sur cette page :
+          on cherche le formulaire, et on cherche à savoir si l'on est
+          concerné. Le découpage se fait sur des titres de section, donc il
+          suit le texte si celui-ci évolue. */}
       <article className="bg-white border-b border-line">
-        <div
-          className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 prose-content"
-          dangerouslySetInnerHTML={{ __html: teuladeBody }}
-        />
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="prose-content" dangerouslySetInnerHTML={{ __html: corps.avant }} />
+
+          <CTAEncart
+            question="Vous cherchez le formulaire de la subvention Teulade ?"
+            reponse="Il n’existe pas de formulaire unique à télécharger, et c’est précisément là que la plupart des centres s’arrêtent. L’éligibilité s’apprécie sur pièces, à partir de votre situation d’emploi réelle. Nous nous en chargeons de bout en bout, de la vérification jusqu’au versement effectif."
+            label="Faire vérifier mon éligibilité"
+          />
+
+          <div className="prose-content" dangerouslySetInnerHTML={{ __html: corps.milieu }} />
+
+          <CTAEncart
+            question="Un seul de ces signes vous concerne ?"
+            reponse="Alors la question mérite d’être tranchée, et elle se tranche sur pièces en un échange. Nous vous disons si votre centre est concerné, et ce qu’il a laissé de côté le cas échéant."
+            label="Savoir si mon centre est concerné"
+            mention="Échange gratuit, sans engagement. Nous répondons même si la réponse est non."
+          />
+
+          <div className="prose-content" dangerouslySetInnerHTML={{ __html: corps.apres }} />
+        </div>
       </article>
 
       <section className="bg-soft border-b border-line">
