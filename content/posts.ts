@@ -1220,6 +1220,52 @@ export const posts: Post[] = [
 <p>Un check-up gratuit permet de confronter vos hypothèses à la réalité du modèle des centres de santé et d’identifier les financements à intégrer avant de figer votre prévisionnel. Contactez-nous pour un check-up.</p>
 `,
   },
+  {
+    slug: "label-maison-france-sante-centre-de-sante",
+    title: "Label Maison France Santé et centres de santé",
+    description:
+      "Le réseau France Santé, créé par la LFSS 2026, labellise les structures d’accès aux soins. Les centres de santé remplissent déjà l’essentiel des critères.",
+    date: "2026-09-09",
+    readingTime: "4 min",
+    category: "Repères",
+    content: `
+<h2>Un réseau national, un label, une promesse</h2>
+<p>La loi de financement de la sécurité sociale pour 2026 a créé le réseau France Santé. Son principe tient en deux engagements adressés à la population : une réponse de santé à moins de trente minutes du domicile, et un rendez-vous sous quarante-huit heures lorsque l’état du patient le requiert.</p>
+<p>Ce réseau s’appuie sur un label, la <strong>Maison France Santé</strong>, attribué à des structures existantes plutôt qu’à des créations nouvelles. L’objectif affiché est de rendre l’offre de soins de proximité plus lisible et d’orienter les habitants vers des lieux coordonnés et pluriprofessionnels.</p>
+
+<h2>Ce que le label exige</h2>
+<p>Les critères retenus pour la première vague de labellisation sont concrets et vérifiables :</p>
+<ul>
+  <li>la présence d’un médecin généraliste disposant d’une patientèle</li>
+  <li>la présence d’un infirmier, au sein de la structure ou à proximité</li>
+  <li>une ouverture d’au moins cinq jours par semaine</li>
+  <li>des consultations sans dépassement d’honoraires</li>
+  <li>la capacité à proposer un rendez-vous sous quarante-huit heures, ou à orienter rapidement</li>
+</ul>
+<p>Le label n’est pas réservé à une forme juridique. Peuvent y prétendre les <a href="/centres-de-sante">centres de santé</a>, les maisons de santé pluriprofessionnelles, les cabinets médicaux regroupés, les établissements de santé assurant des soins primaires dont les hôpitaux de proximité, et d’autres lieux d’accès aux soins de proximité.</p>
+
+<h2>Pourquoi un centre de santé part avec une longueur d’avance</h2>
+<p>C’est le point que beaucoup de gestionnaires n’ont pas encore mesuré. Lisez la liste des critères et comparez-la au fonctionnement ordinaire d’un centre de santé conventionné : l’absence de dépassement d’honoraires n’est pas un effort à consentir, c’est la définition même du secteur 1 que le centre pratique déjà, comme nous le développons dans notre article sur l’<a href="/ressources/accessibilite-financiere-centre-de-sante">accessibilité financière</a>.</p>
+<p>La présence conjointe d’un médecin et d’un infirmier découle du salariat et de l’organisation collective. L’amplitude d’ouverture relève d’engagements que le cadre conventionnel valorise déjà. La capacité d’orientation rapide suppose une coordination interne, sujet que traite notre article sur la <a href="/ressources/coordination-centre-de-sante">fonction de coordination</a>.</p>
+<p>Autrement dit, là où une structure libérale doit se réorganiser pour satisfaire ces critères, un centre de santé doit surtout démontrer ce qu’il fait déjà. La difficulté se déplace de l’organisation vers la preuve.</p>
+
+<h2>La position de la profession</h2>
+<p>La Fédération nationale des centres de santé et l’Union syndicale des professionnels des centres de santé ont pris position sur ce dispositif. Elles demandent un cahier des charges national exigeant, établissant un socle commun de missions tout en restant modulable selon les besoins locaux.</p>
+<p>Leur réserve principale mérite d’être connue des porteurs de projet : le réseau, écrivent-elles, <a href="https://www.fncs.org/maisons-france-sante-la-fncs-et-l-uspcs-appellent-a-construire-collectivement-le-service-public-territorial-de-sante-de-proximite" rel="noopener">ne peut se limiter à une simple labellisation des structures existantes</a> ni à la création de guichets et de plateformes d’information. Elles affirment par ailleurs que les centres de santé sont déjà en mesure de faire vivre ce réseau, de l’incarner et de le développer.</p>
+
+<h2>Où en est le déploiement</h2>
+<p>La première vague de labellisation a eu lieu fin 2025. En Auvergne-Rhône-Alpes, cent quatre-vingt-deux structures ont été labellisées à cette occasion, et les agences régionales de santé ont annoncé la poursuite du mouvement en 2026. Les objectifs annoncés portent sur deux mille structures pour l’été 2026, puis cinq mille en 2027, avec une enveloppe de cinquante millions d’euros consacrée au déploiement du réseau en 2026.</p>
+<p>Les structures labellisées peuvent bénéficier de financements dédiés au développement du réseau. Leur montant et leurs modalités relèvent des arbitrages régionaux, ce qui suppose de suivre les appels de son agence plutôt que d’attendre une communication nationale.</p>
+
+<h2>Ce qu’il faut préparer</h2>
+<p>Un centre qui vise le label a intérêt à traiter trois sujets sans attendre. D’abord la documentation de son organisation : amplitude réelle d’ouverture, délais de rendez-vous constatés, présence effective des professionnels. Ce sont des éléments qui se démontrent avec des données, pas avec des intentions.</p>
+<p>Ensuite la cohérence avec le <a href="/ressources/projet-de-sante-centre-de-sante">projet de santé</a>, qui reste le document de référence lu par l’autorité de tutelle. Un projet de santé qui décrit une organisation différente de celle présentée à la labellisation affaiblit les deux dossiers à la fois, sujet que couvre notre mission <a href="/services/conformite-projet-de-sante">conformité et projet de santé</a>.</p>
+<p>Enfin l’articulation avec les autres recettes du centre. Le label ouvre des financements propres, qui s’ajoutent aux dispositifs conventionnels sans s’y substituer. Le panorama complet figure sur notre page <a href="/financements">financements</a>.</p>
+
+<h2>Contactez-nous</h2>
+<p>Si vous vous demandez ce que votre centre doit démontrer pour être labellisé, et ce que le label lui apporterait en plus de ses financements actuels, un check-up gratuit permet de le poser à plat. Contactez-nous pour un check-up.</p>
+`,
+  },
 ];
 
 // Renvoie uniquement les articles dont la date de publication est atteinte.
