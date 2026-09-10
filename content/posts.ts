@@ -26,6 +26,15 @@ export type Post = {
     label?: string;
     mention?: string;
   };
+  /**
+   * Affiche l'encart partenaire recrutement en bas de l'article.
+   *
+   * Drapeau explicite plutôt que règle sur la catégorie : « RH » couvre aussi
+   * bien le recrutement que la paie ou le statut du gestionnaire, et un
+   * encart partenaire finirait par apparaître sous un article qui ne parle
+   * pas de recrutement. On le pose article par article.
+   */
+  partenaireRecrutement?: boolean;
 };
 
 /** Marqueur d'insertion de l'encart dans le corps HTML d'un article. */
@@ -468,6 +477,7 @@ export const posts: Post[] = [
     date: "2026-06-14",
     readingTime: "4 min",
     category: "RH",
+    partenaireRecrutement: true,
     content: `<h2>Un modèle qui attire</h2>
 <p>Le salariat séduit une partie croissante des praticiens, en quête de stabilité et de cadre. Les centres de santé en font un argument d’attractivité fort. Il faut cependant mesurer ce que recouvre cette attente. Ce n’est pas seulement une question de rémunération, c’est d’abord la promesse d’un exercice débarrassé de la gestion administrative, de la comptabilité et des contraintes d’installation. Un centre qui promet ce confort sans l’organiser réellement voit ses recrutements se défaire au bout de quelques mois.</p>
 <h2>Ce que regardent les candidats</h2>
@@ -1111,6 +1121,7 @@ export const posts: Post[] = [
     date: "2026-08-06",
     readingTime: "2 min",
     category: "RH",
+    partenaireRecrutement: true,
     content: `<h2>Un cadre à sécuriser dès le départ</h2>
 <p>Le contrat de travail d’un médecin salarié en centre de santé pose les bases de la relation entre le praticien et la structure. Bien construit, il évite les malentendus et les tensions dans les mois qui suivent l’embauche. Mal construit, il devient le premier sujet de discussion dès qu’une difficulté apparaît sur les plannings, sur la charge de travail ou sur la rémunération variable.</p>
 <h2>Les clauses essentielles</h2>
@@ -1163,6 +1174,7 @@ export const posts: Post[] = [
     date: "2026-08-06",
     readingTime: "2 min",
     category: "RH",
+    partenaireRecrutement: true,
     content: `<h2>Un contexte de recrutement particulier</h2>
 <p>Un centre municipal de santé recrute dans un cadre porté par une collectivité territoriale. Ce portage public rassure certains praticiens, mais impose aussi des délais et des procédures qui diffèrent d’une structure associative ou mutualiste. Les règles applicables à l’emploi public, le calendrier des instances et les arbitrages budgétaires de la commune structurent le processus du début à la fin.</p>
 <h2>Des atouts à faire valoir</h2>
@@ -1186,6 +1198,7 @@ export const posts: Post[] = [
     date: "2026-08-06",
     readingTime: "2 min",
     category: "RH",
+    partenaireRecrutement: true,
     content: `<h2>Un critère de choix pour les praticiens</h2>
 <p>La rémunération reste l’un des premiers éléments comparés par un médecin qui envisage un poste salarié. En centre de santé, le salaire ne se limite pas à un chiffre affiché sur une annonce : il s’inscrit dans une grille et un ensemble de conditions qui, mis bout à bout, déterminent l’attractivité réelle du poste.</p>
 <h2>Ce qui compose la rémunération</h2>
@@ -1209,6 +1222,7 @@ export const posts: Post[] = [
     date: "2026-08-24",
     readingTime: "4 min",
     category: "RH",
+    partenaireRecrutement: true,
     content: `
 <h2>Le départ coûte plus cher que le recrutement</h2>
 <p>Les directions de centres de santé raisonnent presque toujours en termes de recrutement. C'est compréhensible, puisque le poste vacant est visible et douloureux. Pourtant, le départ d'un praticien déjà installé coûte davantage qu'un poste jamais pourvu. Le centre perd le temps médical, mais aussi la patientèle attachée à ce médecin, les indicateurs construits sur son suivi, et la charge retombe sur une équipe déjà tendue. Il faut ensuite recruter, intégrer, et attendre plusieurs mois que le remplaçant atteigne un rythme comparable.</p>
@@ -1234,7 +1248,7 @@ export const posts: Post[] = [
 <p>Un départ se prépare longtemps avant d'être annoncé. Les signes précèdent : baisse de participation aux réunions d'équipe, demandes répétées d'aménagement d'horaires, désengagement des projets transversaux, questions inhabituelles sur les modalités de rupture, ou refus systématique de prendre de nouveaux patients. Aucun de ces signaux ne vaut preuve isolément, mais leur accumulation chez un même praticien justifie un entretien avant que la décision ne soit prise. Une fois le courrier envoyé, la marge de manoeuvre est presque toujours nulle.</p>
 
 <h2>Fidélisation et équilibre économique</h2>
-<p>Retenir un praticien protège directement le modèle du centre. La patientèle reste attachée à la structure, les indicateurs de suivi conservent leur continuité, et les <a href="/financements">financements mobilisables par le centre</a> qui reposent sur l'activité et sur la qualité du suivi ne subissent pas de rupture. Un turnover élevé dégrade ces recettes bien au-delà du coût visible du remplacement. C'est un des points que nous examinons systématiquement dans nos missions de <a href="/recrutement-medecins">recrutement de médecins</a>, aux côtés de <a href="https://talentcaresante.fr" rel="noopener">TalentCare Santé</a>, notre partenaire recrutement : recruter sans traiter la rétention revient à remplir un réservoir percé.</p>
+<p>Retenir un praticien protège directement le modèle du centre. La patientèle reste attachée à la structure, les indicateurs de suivi conservent leur continuité, et les <a href="/financements">financements mobilisables par le centre</a> qui reposent sur l'activité et sur la qualité du suivi ne subissent pas de rupture. Un turnover élevé dégrade ces recettes bien au-delà du coût visible du remplacement. C'est un des points que nous examinons systématiquement dans nos missions de <a href="/recrutement-medecins">recrutement de médecins</a> : recruter sans traiter la rétention revient à remplir un réservoir percé.</p>
 
 <h2>Contactez-nous</h2>
 <p>Un check-up gratuit permet d'objectiver votre turnover, d'identifier les conditions d'exercice qui font partir vos praticiens et de hiérarchiser les leviers accessibles à court terme. Contactez-nous pour un check-up.</p>

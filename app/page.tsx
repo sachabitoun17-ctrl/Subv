@@ -239,8 +239,8 @@ export default function HomePage() {
               return (
                 <div key={p.id} className="rounded-2xl bg-white ring-1 ring-line p-7">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-600 to-accent-400 text-white grid place-items-center font-bold text-sm">
-                      {p.label.charAt(0)}
+                    <div className="w-10 h-10 shrink-0 rounded-lg bg-gradient-to-br from-accent-600 to-accent-400 text-white grid place-items-center">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={p.icon} /></svg>
                     </div>
                     <h3 className="text-xl font-bold text-ink">{p.label}</h3>
                   </div>

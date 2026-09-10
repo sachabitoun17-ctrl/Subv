@@ -38,8 +38,8 @@ export default function Page() {
           <section key={p.id} className="bg-white border-b border-line">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-600 to-accent-400 text-white grid place-items-center font-bold text-sm">
-                  {p.label.charAt(0)}
+                <div className="w-10 h-10 shrink-0 rounded-lg bg-gradient-to-br from-accent-600 to-accent-400 text-white grid place-items-center">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={p.icon} /></svg>
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-ink tracking-tight">{p.label}</h2>
               </div>

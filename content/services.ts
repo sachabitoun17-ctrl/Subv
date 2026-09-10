@@ -32,6 +32,14 @@ const ICONS = {
   truck: "M20 8h-3V4H1v13h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM19.5 9.5l1.96 2.5H17V9.5h2.5zM18 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z",
   shield: "M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z",
   search: "M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5z",
+  // Icônes de pilier. Volontairement distinctes de celles des services
+  // qu'elles chapeautent : le pilier et ses trois cartes sont visibles d'un
+  // seul coup d'œil, et le même symbole répété à deux échelles se lit comme
+  // une erreur plutôt que comme une hiérarchie.
+  euroSign: "M15 18.5c-2.51 0-4.68-1.42-5.76-3.5H15v-2H8.58c-.05-.33-.08-.66-.08-1s.03-.67.08-1H15V9H9.24C10.32 6.92 12.5 5.5 15 5.5c1.61 0 3.09.59 4.23 1.57L21 5.3C19.41 3.87 17.3 3 15 3c-3.92 0-7.24 2.51-8.48 6H3v2h3.06c-.04.33-.06.66-.06 1s.02.67.06 1H3v2h3.52c1.24 3.49 4.56 6 8.48 6 2.31 0 4.41-.87 6-2.3l-1.78-1.77c-1.13.98-2.6 1.57-4.22 1.57z",
+  institution: "M4 10v7h3v-7H4zm6 0v7h3v-7h-3zM2 22h19v-3H2v3zm14-12v7h3v-7h-3zm-4.5-9L2 6v2h19V6l-9.5-5z",
+  trending: "M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z",
+  navigation: "M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z",
 };
 
 export const services: Service[] = [
@@ -313,9 +321,6 @@ export const services: Service[] = [
 <h2>Articulation avec nos autres missions</h2>
 <p>Un recrutement ne se traite jamais isolement. Un poste medical supplementaire modifie l'equilibre economique, les plannings et la capacite d'accueil. Nous verifions donc en parallele que le modele tient, ce qui rejoint nos travaux de <a href="/services/optimisation-de-l-activite">pilotage de l'activite</a>. Lorsque le recrutement s'inscrit dans une croissance plus large, ouverture d'antenne ou nouvelle specialite, il releve de la mission <a href="/services/developpement">developpement</a>. Et quand le financement du poste depend de dispositifs conventionnels ou de subventions, notamment la subvention Teulade prevue a l'article L162-32, nous integrons cette dimension a l'analyse plutot que de la decouvrir apres la signature.</p>
 
-<h2>Qui realise le sourcing</h2>
-<p>La recherche des praticiens elle-meme est conduite avec <a href="https://talentcaresante.fr" rel="noopener">TalentCare Sante</a>, notre partenaire dedie au recrutement medical. Nous restons votre interlocuteur sur le cadrage du besoin, la construction du poste et tout ce qui touche au fonctionnement du centre de sante.</p>
-
 <h2>Contactez-nous</h2>
 <p>Si vous cherchez un ou plusieurs medecins et que la demarche s'enlise, un regard exterieur permet d'identifier ce qui bloque avant d'engager du temps et du budget dans une campagne qui ne donnera rien. Contactez-nous pour un check-up.</p>`,
   },
@@ -539,9 +544,9 @@ export const services: Service[] = [
   },
 ];
 
-export const PILLARS: { id: Service["pillar"]; label: string; desc: string }[] = [
-  { id: "financement", label: "Financement", desc: "Identification et mobilisation des financements et subventions." },
-  { id: "structuration", label: "Structuration", desc: "Création, statuts juridiques, projet de santé, dossiers ARS." },
-  { id: "developpement", label: "Développement", desc: "Recrutement, patientèle, ouverture d’antennes, croissance." },
-  { id: "accompagnement", label: "Accompagnement", desc: "Gestion, organisation, pilotage de l’activité au quotidien." },
+export const PILLARS: { id: Service["pillar"]; label: string; desc: string; icon: string }[] = [
+  { id: "financement", label: "Financement", desc: "Identification et mobilisation des financements et subventions.", icon: ICONS.euroSign },
+  { id: "structuration", label: "Structuration", desc: "Création, statuts juridiques, projet de santé, dossiers ARS.", icon: ICONS.institution },
+  { id: "developpement", label: "Développement", desc: "Recrutement, patientèle, ouverture d’antennes, croissance.", icon: ICONS.trending },
+  { id: "accompagnement", label: "Accompagnement", desc: "Gestion, organisation, pilotage de l’activité au quotidien.", icon: ICONS.navigation },
 ];

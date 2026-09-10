@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTA";
 import { publishedPosts, getPost, CTA_MARQUEUR } from "@/content/posts";
 import { CTAEncart } from "@/components/CTAEncart";
+import { EncartPartenaire } from "@/components/EncartPartenaire";
 import { SITE_NAME, SITE_URL, OG_IMAGE, makePageMeta } from "@/lib/seo";
 
 type Params = { slug: string };
@@ -93,6 +94,7 @@ export default function Page({ params }: { params: Params }) {
           {apresCta ? (
             <div className="prose-content" dangerouslySetInnerHTML={{ __html: apresCta }} />
           ) : null}
+          {post.partenaireRecrutement ? <EncartPartenaire /> : null}
         </div>
       </article>
 

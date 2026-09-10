@@ -144,8 +144,6 @@ export default function Page() {
           <p>Encore faut-il savoir le mettre en avant. Un centre de santé attractif, c’est un projet lisible, une équipe accueillante, des conditions d’exercice claires et une organisation qui laisse le médecin se concentrer sur le soin. Nous vous aidons à structurer ce discours et à le porter face aux candidats.</p>
           <h2>Recrutement et équilibre économique</h2>
           <p>Chaque médecin recruté augmente votre patientèle et votre chiffre conventionné. Un chiffre conventionné plus élevé fait grandir les <Link href="/financements">financements mobilisables par votre centre</Link>, qui contribuent à couvrir la masse salariale. Le recrutement et le financement avancent ensemble.</p>
-          <h2>Notre partenaire recrutement</h2>
-          <p>Le sourcing des praticiens est mené avec <a href="https://talentcaresante.fr" rel="noopener">TalentCare Santé</a>, notre partenaire dédié au recrutement médical. Cette répartition est délibérée : le recrutement médical est un métier à part entière, et nous préférons l’adosser à une structure qui ne fait que cela plutôt que de prétendre tout couvrir. Vous gardez un interlocuteur unique chez nous sur tout ce qui relève du centre de santé, statut salarié, package, clauses conventionnelles et conditions d’accueil.</p>
         </div>
       </article>
 
