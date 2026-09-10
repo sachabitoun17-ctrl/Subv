@@ -124,6 +124,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${GA_ID}');`,
           }}
         />
+        {/* L'image d'en-tête de l'accueil est servie par un tiers et pèse
+            185 Ko : c'est le plus gros élément de la page. Sans preconnect,
+            le navigateur résout le DNS puis négocie le TLS avant même de
+            commencer à la télécharger. À terme elle a vocation à être
+            hébergée sur notre domaine, ce qui rendra cette ligne inutile. */}
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <meta name="theme-color" content="#1660C9" />
         <script
