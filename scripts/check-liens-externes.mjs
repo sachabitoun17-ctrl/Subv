@@ -47,7 +47,7 @@ const CODES_MORTS = new Set([404, 410]);
 // CETTE LISTE DOIT SE VIDER. Chaque entrée est une dette assumée, pas une
 // exception permanente : retirer le domaine dès qu'il résout, ce que le
 // contrôle confirmera en le laissant passer en vert.
-const EN_ATTENTE = new Set(["talentcaresante.fr", "www.talentcaresante.fr"]);
+const EN_ATTENTE = new Set([]);
 
 if (!existsSync(OUT_DIR)) {
   console.error(`check-liens-externes: dossier "${OUT_DIR}" introuvable.`);
