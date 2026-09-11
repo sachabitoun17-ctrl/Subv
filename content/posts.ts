@@ -27,14 +27,21 @@ export type Post = {
     mention?: string;
   };
   /**
-   * Affiche l'encart partenaire recrutement en bas de l'article.
+   * Encart partenaire recrutement en bas de l'article.
    *
-   * Drapeau explicite plutôt que règle sur la catégorie : « RH » couvre aussi
-   * bien le recrutement que la paie ou le statut du gestionnaire, et un
-   * encart partenaire finirait par apparaître sous un article qui ne parle
-   * pas de recrutement. On le pose article par article.
+   * Posé article par article plutôt que par une règle sur la catégorie :
+   * « RH » couvre aussi bien le recrutement que la paie ou le statut du
+   * gestionnaire, et l'encart finirait par apparaître sous un article qui ne
+   * parle pas de recrutement.
+   *
+   * La cible et le libellé sont obligatoires, et c'est délibéré. Les cinq
+   * premiers encarts partageaient les valeurs par défaut du composant : ils
+   * pointaient tous vers la page d'accueil du partenaire, sous la même ancre
+   * répétée cinq fois. Deux motifs que l'on reproche à juste titre aux liens
+   * d'échange. En rendant les deux champs obligatoires, on ne peut plus poser
+   * un encart sans choisir vers quoi il envoie ni ce qu'il annonce.
    */
-  partenaireRecrutement?: boolean;
+  partenaireRecrutement?: { href: string; libelle: string; texte?: string };
 };
 
 /** Marqueur d'insertion de l'encart dans le corps HTML d'un article. */
@@ -477,7 +484,12 @@ export const posts: Post[] = [
     date: "2026-06-14",
     readingTime: "4 min",
     category: "RH",
-    partenaireRecrutement: true,
+    partenaireRecrutement: {
+      href: "https://talentcaresante.fr/offres-emploi/metier/medecin-generaliste/",
+      libelle: "leurs postes de médecin généraliste",
+      texte:
+        "Le sourcing des praticiens est mené avec TalentCare Santé, cabinet dédié au recrutement médical. Nous restons votre interlocuteur sur le cadrage du poste et sur tout ce qui relève du centre de santé.",
+    },
     content: `<h2>Un modèle qui attire</h2>
 <p>Le salariat séduit une partie croissante des praticiens, en quête de stabilité et de cadre. Les centres de santé en font un argument d’attractivité fort. Il faut cependant mesurer ce que recouvre cette attente. Ce n’est pas seulement une question de rémunération, c’est d’abord la promesse d’un exercice débarrassé de la gestion administrative, de la comptabilité et des contraintes d’installation. Un centre qui promet ce confort sans l’organiser réellement voit ses recrutements se défaire au bout de quelques mois.</p>
 <h2>Ce que regardent les candidats</h2>
@@ -1121,7 +1133,6 @@ export const posts: Post[] = [
     date: "2026-08-06",
     readingTime: "2 min",
     category: "RH",
-    partenaireRecrutement: true,
     content: `<h2>Un cadre à sécuriser dès le départ</h2>
 <p>Le contrat de travail d’un médecin salarié en centre de santé pose les bases de la relation entre le praticien et la structure. Bien construit, il évite les malentendus et les tensions dans les mois qui suivent l’embauche. Mal construit, il devient le premier sujet de discussion dès qu’une difficulté apparaît sur les plannings, sur la charge de travail ou sur la rémunération variable.</p>
 <h2>Les clauses essentielles</h2>
@@ -1174,7 +1185,12 @@ export const posts: Post[] = [
     date: "2026-08-06",
     readingTime: "2 min",
     category: "RH",
-    partenaireRecrutement: true,
+    partenaireRecrutement: {
+      href: "https://talentcaresante.fr/offres-emploi/",
+      libelle: "les postes actuellement ouverts en centre de santé",
+      texte:
+        "Pour la recherche des candidats elle-même, nous travaillons avec TalentCare Santé. Voir ce qui se publie aujourd'hui donne une idée réaliste du marché sur lequel votre commune se place.",
+    },
     content: `<h2>Un contexte de recrutement particulier</h2>
 <p>Un centre municipal de santé recrute dans un cadre porté par une collectivité territoriale. Ce portage public rassure certains praticiens, mais impose aussi des délais et des procédures qui diffèrent d’une structure associative ou mutualiste. Les règles applicables à l’emploi public, le calendrier des instances et les arbitrages budgétaires de la commune structurent le processus du début à la fin.</p>
 <h2>Des atouts à faire valoir</h2>
@@ -1198,7 +1214,12 @@ export const posts: Post[] = [
     date: "2026-08-06",
     readingTime: "2 min",
     category: "RH",
-    partenaireRecrutement: true,
+    partenaireRecrutement: {
+      href: "https://talentcaresante.fr/offres-emploi/region/ile-de-france/",
+      libelle: "les offres publiées en Île-de-France",
+      texte:
+        "Une rémunération ne se situe que par rapport à ce qui se propose autour de vous. Les annonces de TalentCare Santé, notre partenaire recrutement, donnent ce point de comparaison région par région.",
+    },
     content: `<h2>Un critère de choix pour les praticiens</h2>
 <p>La rémunération reste l’un des premiers éléments comparés par un médecin qui envisage un poste salarié. En centre de santé, le salaire ne se limite pas à un chiffre affiché sur une annonce : il s’inscrit dans une grille et un ensemble de conditions qui, mis bout à bout, déterminent l’attractivité réelle du poste.</p>
 <h2>Ce qui compose la rémunération</h2>
@@ -1222,7 +1243,6 @@ export const posts: Post[] = [
     date: "2026-08-24",
     readingTime: "4 min",
     category: "RH",
-    partenaireRecrutement: true,
     content: `
 <h2>Le départ coûte plus cher que le recrutement</h2>
 <p>Les directions de centres de santé raisonnent presque toujours en termes de recrutement. C'est compréhensible, puisque le poste vacant est visible et douloureux. Pourtant, le départ d'un praticien déjà installé coûte davantage qu'un poste jamais pourvu. Le centre perd le temps médical, mais aussi la patientèle attachée à ce médecin, les indicateurs construits sur son suivi, et la charge retombe sur une équipe déjà tendue. Il faut ensuite recruter, intégrer, et attendre plusieurs mois que le remplaçant atteigne un rythme comparable.</p>

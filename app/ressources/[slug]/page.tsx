@@ -94,7 +94,13 @@ export default function Page({ params }: { params: Params }) {
           {apresCta ? (
             <div className="prose-content" dangerouslySetInnerHTML={{ __html: apresCta }} />
           ) : null}
-          {post.partenaireRecrutement ? <EncartPartenaire /> : null}
+          {post.partenaireRecrutement ? (
+            <EncartPartenaire
+              href={post.partenaireRecrutement.href}
+              libelle={post.partenaireRecrutement.libelle}
+              texte={post.partenaireRecrutement.texte}
+            />
+          ) : null}
         </div>
       </article>
 

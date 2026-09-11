@@ -85,6 +85,9 @@ jobs:
       - name: Liens sortants (bloquant sur 404 et domaine inexistant)
         run: node scripts/check-liens-externes.mjs
 
+      - name: Liens partenaires (bloquant)
+        run: node scripts/check-liens-partenaire.mjs
+
       - name: Relever les URL déjà en ligne
         run: |
           curl -s https://opti-cds.fr/sitemap.xml \

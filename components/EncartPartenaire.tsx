@@ -12,15 +12,21 @@
  * Le registre visuel est délibérément plus bas que celui de CTAEncart : fond
  * neutre, pas de bouton, un lien texte. Un encart partenaire qui crie aussi
  * fort que l'appel au contact lui prend des clics.
+ *
+ * `href` et `libelle` n'ont volontairement pas de valeur par défaut. Quand
+ * ils en avaient, les cinq encarts du site pointaient tous vers la page
+ * d'accueil du partenaire sous la même ancre répétée cinq fois — les deux
+ * motifs qui distinguent un lien d'échange d'un lien éditorial. Ne pas les
+ * rétablir : c'est l'absence de défaut qui force à choisir.
  */
 export function EncartPartenaire({
+  href,
+  libelle,
   texte = "Le sourcing des praticiens est mené avec TalentCare Santé, notre partenaire dédié au recrutement médical. Nous restons votre interlocuteur sur tout ce qui relève du centre de santé.",
-  libelle = "Voir TalentCare Santé",
-  href = "https://talentcaresante.fr",
 }: {
+  href: string;
+  libelle: string;
   texte?: string;
-  libelle?: string;
-  href?: string;
 }) {
   return (
     <aside className="not-prose mt-12 rounded-xl bg-soft ring-1 ring-line p-5 sm:p-6">
